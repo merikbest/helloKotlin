@@ -1,6 +1,4 @@
-package kot
-
-import jdk.nashorn.internal.ir.IfNode
+package kot.kot2_Syntax
 
 //Kotlin
 object HelloWorld {
@@ -182,6 +180,48 @@ object HelloWorld {
         for (i in 100 downTo 0 step 2) { //step 2 - шаг (четные числа)
             print("$i ")
         }
+        println()
+
+        //Пример 3 умножение на 2
+        val array3 = arrayOfNulls<Int?>(101)
+
+        for (i in 0 until array3.size) {
+            array3[i] = i
+        }
+
+        //Для умножения надо объявить index и дописать withIndex()
+        for ((index, i) in array3.withIndex()) {
+            array3[index] = i?.times(2) // i * 2
+        }
+
+        for (i in array3) {
+            print("$i ")
+        }
+
+        //ДЗ
+        val array4 = arrayOfNulls<Int?>(601)
+
+        for ((index, i) in (0..600).withIndex()) {
+            array4[index] = i
+        }
+
+        for (i in array4.size - 1 downTo 0 step 5) {
+            print("${array4[i]} ")
+        }
+        println()
+
+        /**
+         * 10. Функции
+         */
+        println("10. Функции")
+
+
+
+
+
+
     }
+
+
 
 }
